@@ -1,7 +1,7 @@
 include "proto/base.thrift"
 include "proto/domain.thrift"
 include "proto/payment_processing.thrift"
-include "proto/withdrawal_session.thrift"
+include "withdrawal_session.thrift"
 
 namespace java dev.vality.repairer
 
