@@ -41,8 +41,8 @@ struct MachineRepairResponse {
 }
 
 struct Timespan {
-    1: required base.Timestamp fromTime
-    1: required base.Timestamp toTime
+    1: required base.Timestamp from_time
+    2: required base.Timestamp to_time
 }
 
 enum Status {
@@ -54,11 +54,11 @@ enum Status {
 struct SearchRequest {
     1: optional MachineID id
     2: optional Namespace ns
-    1: optional Timespan timespan
-    2: optional ProviderID provider_id
-    3: optional Status status
-    4: optional string error_message
-    5: optional ContinuationToken continuation_token
+    3: optional Timespan timespan
+    4: optional ProviderID provider_id
+    5: optional Status status
+    6: optional string error_message
+    7: optional ContinuationToken continuation_token
 }
 
 struct Machine {
