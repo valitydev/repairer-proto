@@ -11,6 +11,7 @@ typedef string Namespace
 typedef string ContinuationToken
 typedef list<MachineSimpleRepairRequest> SimpleRepairRequest
 typedef list<RepairWithdrawalRequest> RepairWithdrawalsRequest
+typedef list<RepairInvoiceRequest> RepairInvoicesRequest
 typedef list<MachineRepairResponse> RepairResponse
 
 struct MachineSimpleRepairRequest {
@@ -23,12 +24,7 @@ struct RepairWithdrawalRequest {
     2: required withdrawal_session.RepairScenario scenario
 }
 
-struct RepairInvoicesWithScenarioRequest {
-    1: required payment_processing.UserInfo user
-    2: required InvoiceRepairScenario scenario
-}
-
-struct InvoiceRepairScenario {
+struct RepairInvoiceRequest {
     1: required domain.InvoiceID id
     2: required payment_processing.InvoiceRepairScenario scenario
 }
@@ -87,7 +83,7 @@ service RepairManagement {
 
     RepairResponse RepairWithdrawals (1: RepairWithdrawalsRequest request);
 
-    RepairResponse RepairInvoicesWithScenario (1: RepairInvoicesWithScenarioRequest request);
+    RepairResponse RepairInvoices (1: RepairInvoicesRequest request);
 
     SearchResponse Search (1: SearchRequest request);
 }
