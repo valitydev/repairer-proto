@@ -61,7 +61,7 @@ struct Machine {
     1: required MachineID id
     2: required Namespace ns
     3: required base.Timestamp created_at
-    4: required Status status
+    4: required RepairStatus status
     5: optional ProviderID provider_id
     6: optional string error_message
     7: optional list<StatusHistory> history
