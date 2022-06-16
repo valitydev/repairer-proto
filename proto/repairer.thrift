@@ -32,7 +32,7 @@ struct RepairInvoiceRequest {
 struct MachineRepairResponse {
     1: required Namespace ns
     2: required MachineID id
-    3: required Status status
+    3: required RepairStatus status
     4: optional string error_message
 }
 
@@ -41,7 +41,7 @@ struct Timespan {
     2: required base.Timestamp to_time
 }
 
-enum Status {
+enum RepairStatus {
     failed,
     in_progress,
     repaired
@@ -52,7 +52,7 @@ struct SearchRequest {
     2: optional Namespace ns
     3: optional Timespan timespan
     4: optional ProviderID provider_id
-    5: optional Status status
+    5: optional RepairStatus status
     6: optional string error_message
     7: optional ContinuationToken continuation_token
 }
@@ -68,7 +68,7 @@ struct Machine {
 }
 
 struct StatusHistory {
-    1: required Status status
+    1: required RepairStatus status
     2: required base.Timestamp changed_at
 }
 
