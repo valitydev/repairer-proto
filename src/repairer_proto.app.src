@@ -1,0 +1,8 @@
+{application, repairer_proto, [
+    {description, "Thrift proto for repairer"},
+    {vsn, "0.1.0"},
+    {applications, [
+        kernel,
+        stdlib
+    ]}
+]}.
