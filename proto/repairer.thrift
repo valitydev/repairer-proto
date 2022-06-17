@@ -48,7 +48,7 @@ enum RepairStatus {
 }
 
 struct SearchRequest {
-    1: optional MachineID id
+    1: optional list<MachineID> id
     2: optional Namespace ns
     3: optional Timespan timespan
     4: optional ProviderID provider_id
