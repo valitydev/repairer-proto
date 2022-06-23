@@ -54,7 +54,8 @@ struct SearchRequest {
     4: optional ProviderID provider_id
     5: optional RepairStatus status
     6: optional string error_message
-    7: optional ContinuationToken continuation_token
+    7: optional i32 limit
+    8: optional ContinuationToken continuation_token
 }
 
 struct Machine {
