@@ -12,7 +12,6 @@ typedef string ContinuationToken
 typedef list<MachineSimpleRepairRequest> SimpleRepairRequest
 typedef list<RepairWithdrawalRequest> RepairWithdrawalsRequest
 typedef list<RepairInvoiceRequest> RepairInvoicesRequest
-typedef list<MachineRepairResponse> RepairResponse
 
 struct MachineSimpleRepairRequest {
     1: required Namespace ns
@@ -29,13 +28,6 @@ struct RepairInvoiceRequest {
     2: required payment_processing.InvoiceRepairScenario scenario
 }
 
-struct MachineRepairResponse {
-    1: required Namespace ns
-    2: required MachineID id
-    3: required RepairStatus status
-    4: optional string error_message
-}
-
 struct Timespan {
     1: required base.Timestamp from_time
     2: required base.Timestamp to_time
@@ -48,7 +40,7 @@ enum RepairStatus {
 }
 
 struct SearchRequest {
-    1: optional list<MachineID> id
+    1: optional list<MachineID> ids
     2: optional Namespace ns
     3: optional Timespan timespan
     4: optional ProviderID provider_id
@@ -80,11 +72,11 @@ struct SearchResponse {
 
 service RepairManagement {
 
-    RepairResponse SimpleRepairAll (1: SimpleRepairRequest request);
+    void SimpleRepairAll (1: SimpleRepairRequest request);
 
-    RepairResponse RepairWithdrawals (1: RepairWithdrawalsRequest request);
+    void RepairWithdrawals (1: RepairWithdrawalsRequest request);
 
-    RepairResponse RepairInvoices (1: RepairInvoicesRequest request);
+    void RepairInvoices (1: RepairInvoicesRequest request);
 
     SearchResponse Search (1: SearchRequest request);
 }
