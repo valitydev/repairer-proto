@@ -23,6 +23,6 @@
   "devDependencies": {
     "@vality/thrift-codegen": "0.1.1-c81b4b7.0",
     "damsel": "github:valitydev/damsel#dac2cb599499cc0701e60856f4092c9ab283eedf",
-    "fistful-proto": "github:valitydev/fistful-proto#c45166d018d36a75452c3007f704e8fd3ad1056c"
+    "fistful-proto": "github:valitydev/fistful-proto#aa687df9aa793763c7aef1311cb54c9492ec4807"
   }
 }
