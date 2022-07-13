@@ -21,8 +21,8 @@
   "main": "./lib/repairer.js",
   "types": "./lib/repairer.d.ts",
   "devDependencies": {
-    "@vality/domain-proto": "^1.0.1-33c5665.0",
-    "@vality/fistful-proto": "^1.0.1-aa687df.0",
-    "@vality/thrift-codegen": "1.0.1-2b57f34.0"
+    "@vality/domain-proto": "^1.0.1-9362c08.0",
+    "@vality/fistful-proto": "^1.0.1-f19e383.0",
+    "@vality/thrift-codegen": "1.1.1-661afde.0"
   }
 }
