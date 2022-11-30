@@ -3,4 +3,5 @@ target
 
 # frontend
 node_modules
-lib
+clients
+dist

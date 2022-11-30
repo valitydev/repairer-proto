@@ -2,11 +2,16 @@
   "name": "@vality/repairer-proto",
   "version": "1.0.0",
   "scripts": {
-    "codegen": "thrift-codegen ./proto ./node_modules/@vality/domain-proto ./node_modules/@vality/fistful-proto/proto"
+    "codegen": "thrift-codegen --i ./proto ./node_modules/@vality/domain-proto ./node_modules/@vality/fistful-proto/proto --n repairer --t repairer"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": "./dist/thrift-codegen.bundle.js",
+    "./metadata.json": "./dist/metadata.json",
+    "./package.json": "./package.json"
   },
   "repository": {
     "type": "git",
@@ -15,14 +20,21 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/valitydev/repairer-proto#readme",
   "files": [
-    "lib/**/*.{js,d.ts,json}",
+    "dist/**/*.{js,d.ts,json}",
     "**/*.thrift"
   ],
-  "main": "./lib/repairer.js",
-  "types": "./lib/repairer.d.ts",
+  "main": "./dist/thrift-codegen.bundle.js",
+  "types": "index.d.ts",
+  "typesVersions": {
+    ">=4.6": {
+      "*": [
+        "dist/types/*"
+      ]
+    }
+  },
   "devDependencies": {
     "@vality/domain-proto": "^1.0.1-9362c08.0",
     "@vality/fistful-proto": "^1.0.1-f19e383.0",
-    "@vality/thrift-codegen": "1.1.1-661afde.0"
+    "@vality/thrift-codegen": "^1.1.1-7dcdda2.0"
   }
 }
