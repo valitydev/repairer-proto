@@ -20,7 +20,7 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/valitydev/repairer-proto#readme",
   "files": [
-    "dist/**/*.{js,d.ts,json}",
+    "dist/**/*.{js,d.ts,json,map}",
     "**/*.thrift"
   ],
   "main": "./dist/thrift-codegen.bundle.js",
