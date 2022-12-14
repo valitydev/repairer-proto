@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@vality/domain-proto": "2.0.1-34e7420.0",
-    "@vality/fistful-proto": "1.0.1-f19e383.0",
+    "@vality/fistful-proto": "2.0.1-45c188c.0",
     "@vality/thrift-codegen": "2.0.1-246fc01.0"
   }
 }
